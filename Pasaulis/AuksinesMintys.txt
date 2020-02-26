@@ -1,0 +1,39 @@
+Pasaulis
+Tikslas: Zmoniu populiacijos simuliacija
+1. Pradzia:
+    - Sukurti pasauli
+    - prideti pradini skaiciu zmoniu (su tam tikru amziumi)
+2. Pasaulio vystymasis:
+   metu augimas - vienas cikslas - vieni metai
+   - auga metai
+   - zmones mirsta
+       - kai amzius < 20, mirties tikimybe 0.1%
+       - kai amzius < 30, mirties tikimybe 0.5%
+       - kai amzius < 50, mirties tikimybe 10%
+       - kai amzius < 60, mirties tikimybe 20%
+       - >= 60, mirties tikimybe 30%
+   - zmones gimsta
+       - populiacija > 18 iki < 40, tikimybe 10%
+   - kiek yra zmoniu
+Programos duomenys:
+1. Zmogus:
+    duomenys/klases kintamieji:
+        - amzius
+2. Pasaulis
+    duomenys/klases kintamieji:
+        - zmoniu sarasas
+    veiksmai/metodai:
+        - auga metai
+        - zmones mirsta
+            - kai amzius < 20, mirties tikimybe 0.1%
+            - kai amzius < 30, mirties tikimybe 0.5%
+            - kai amzius < 50, mirties tikimybe 10%
+            - kai amzius < 60, mirties tikimybe 20%
+            - >= 60, mirties tikimybe 30%
+        - zmones gimsta
+            - populiacija > 18 iki < 40, tikimybe 10%
+        - kiek yra zmoniu
+Collapse
+
+
+
