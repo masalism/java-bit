@@ -67,5 +67,6 @@ public class Pasaulis {
 
         System.out.println(kapines.size());
         kapines.removeAll(zmones);
+        kapines.clear();
     }
 }
