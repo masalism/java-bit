@@ -1,29 +1,17 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-//Pasaulis
-//        duomenys/klases kintamieji:
-//        - zmoniu sarasas
-//        veiksmai/metodai:
-//        - auga metai
-//        - zmones mirsta
-//        - kai amzius < 20, mirties tikimybe 0.1%
-//        - kai amzius < 30, mirties tikimybe 0.5%
-//        - kai amzius < 50, mirties tikimybe 10%
-//        - kai amzius < 60, mirties tikimybe 20%
-//        - >= 60, mirties tikimybe 30%
-//        - zmones gimsta
-//        - populiacija > 18 iki < 40, tikimybe 10%
-//        - kiek yra zmoniu
 public class Pasaulis extends Object {
-    private int JaunuoliaiAmzius = 20;
-    private double JaunuoliaiMirtingumas = 0.1;
-    private int TevuMinAmzius = 16;
-    private int TevuMaxAmzius = 50;
-    private double VaikuTikimybe = 10;
+    protected int JaunuoliaiAmzius = 20;
+    protected double JaunuoliaiMirtingumas = 0.1;
+    protected int TevuMinAmzius = 16;
+    protected int TevuMaxAmzius = 50;
+    protected double VaikuTikimybe = 10;
+    List<Zmogus> zmones = new LinkedList<>();
 
-    private int gime = 0;
-    private int mire = 0;
+    protected int gime = 0;
+    protected int mire = 0;
 
     public Pasaulis (double jaunuoliuMirtingumas, double gimstamumas) {
         JaunuoliaiMirtingumas = jaunuoliuMirtingumas;
@@ -36,16 +24,13 @@ public class Pasaulis extends Object {
         }
     }
 
-    public  Pasaulis (int tevuMinAmzius) {
+    public Pasaulis (int tevuMinAmzius) {
         TevuMinAmzius = tevuMinAmzius;
     }
 
     public Pasaulis () {
 
     }
-
-
-    List<Zmogus> zmones = new ArrayList<>();
 
     void pridetiZmogu(Zmogus z) {
         zmones.add(z);

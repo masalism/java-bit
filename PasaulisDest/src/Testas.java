@@ -2,7 +2,7 @@ public class Testas {
 
     public static void main(String[] args) {
 
-        Pasaulis pasaulis = new Pasaulis();
+        NaujasPasaulis pasaulis = new NaujasPasaulis();
 
         Zmogus adomas = new Zmogus();
         Zmogus ieva = new Zmogus();
@@ -11,9 +11,6 @@ public class Testas {
 
         pasaulis.pridetiZmogu(adomas);
         pasaulis.pridetiZmogu(ieva);
-//
-//        pasaulis.sendinameZmones();
-
 
         System.out.println(pasaulis.kiekYraZmoniu());
 
