@@ -6,27 +6,36 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-        Figure f = new Figure();
-        f.setColor(256);
+        List<Perimeter> listas = new ArrayList<>();
+//        // listas.add(new Cube(10)); -- klaida nes Cube neimplementuoja Perimeter
+//        listas.add(new Circle(10));
+//        listas.add(new Rectangular(10, 20));
+//        listas.add(new Square(5));
+//        System.out.println("Bendras perimetras yra " + perimetrai(listas));
 
-        f.setX(100);
-        f.setY(-50);
+        List<Area> listasPlotu = new ArrayList<>();
+        listasPlotu.add(new Cube(10));
+        listasPlotu.add(new Circle(10));
+        listasPlotu.add(new Rectangular(10, 20));
+        listasPlotu.add(new Square(5));
+        System.out.println("Bendras plotas yra " + plotai(listasPlotu));
 
-        System.out.println(f.getColor());
-
-        List<Figure> listas = new ArrayList<>();
-        listas.add(new Figure());
-        listas.add(new Figure());
-        listas.add(new Circle(10));
-
-
-
-        System.out.println("Bendras plotas yra " + plotai(listas));
+        Cube kubas = new Cube(123);
+        Object objectas = kubas;
+        Area areasas = kubas;
     }
 
-    static double plotai(List<Figure> figuros) {
+    static double perimetrai(List<Perimeter> figuros) {
+        double bendrasPerimetras = 0;
+        for (Perimeter f : figuros) {
+            bendrasPerimetras += f.perimeter();
+        }
+        return bendrasPerimetras;
+    }
+
+    static double plotai(List<Area> figuros) {
         double bendrasPlotas = 0;
-        for (Figure f : figuros) {
+        for (Area f : figuros) {
             bendrasPlotas += f.area();
         }
         return bendrasPlotas;

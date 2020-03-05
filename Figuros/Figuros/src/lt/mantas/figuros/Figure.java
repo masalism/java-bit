@@ -1,22 +1,17 @@
 package lt.mantas.figuros;
 
-public class Figure {
+public abstract class Figure implements Color {
 
-    private int color; // 0 = juoda, 0xfffff - balta;
-    private int x, y; // figuros koordinates plokstumoje
+    private int color;  // 0 = juoda, 0xffffff - balta
+    private int x, y;   // figuros centro kordinates plokstumoje
 
-    public double perimetras () {
-        return 0;
-    }
 
-    public double area() {
-        return 0;
-    }
-
+    @Override
     public int getColor() {
         return color;
     }
 
+    @Override
     public void setColor(int color) {
         this.color = color;
     }
